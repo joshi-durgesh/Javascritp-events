@@ -7,8 +7,10 @@ const anotherClickHandler = function () {
   console.log("the button click event is working properly");
 };
 
-button.onclick = clickHandler;
+// button.onclick = clickHandler;
 
-// button.addEventListener();
+button.addEventListener("click", clickHandler);
 
-// button.removeEventListener();
+setTimeout(() => {
+  button.removeEventListener("click", clickHandler);
+}, 2000);
