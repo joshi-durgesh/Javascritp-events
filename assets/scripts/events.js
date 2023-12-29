@@ -1,5 +1,5 @@
 // const button = document.querySelector("button");
-const button = document.querySelectorAll("button");
+const button = document.querySelector("button");
 
 const clickHandler = (event) => {
   //   event.target.disabled = true;
@@ -33,5 +33,16 @@ const form = document.querySelector("form");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  console.log(event);
+});
+
+const div = document.querySelector("div");
+div.addEventListener("click", (event) => {
+  console.log("CLICKED DIV");
+  console.log(event);
+});
+
+button.addEventListener("click", (event) => {
+  console.log("CLICKED BUTTON");
   console.log(event);
 });
