@@ -2,7 +2,7 @@
 const button = document.querySelectorAll("button");
 
 const clickHandler = (event) => {
-  event.target.disabled = true;
+  //   event.target.disabled = true;
   console.log(event);
 };
 
@@ -20,6 +20,18 @@ const anotherClickHandler = () => {
 // setTimeout(() => {
 //   button.removeEventListener("click", clickHandler);
 // }, 2000);
-button.forEach((element) => {
-  element.addEventListener("click", clickHandler);
+
+// button.forEach((element) => {
+//   element.addEventListener("click", clickHandler);
+// });
+
+// button.forEach((element) => {
+//   element.addEventListener("mouseenter", clickHandler);
+// });
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log(event);
 });
